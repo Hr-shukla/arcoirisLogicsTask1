@@ -26,3 +26,10 @@ img {
   margin: 10px auto;
   border-radius: 50%;
 }
+
+#loginEmail{
+  width: 90%;
+}
+#loginPassword{
+  width: 90%;
+}
