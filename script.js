@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         localStorage.setItem('user', JSON.stringify(user));
         alert("Registered successfully!");
-        window.location.href = "login.html";
+        window.location.href = "index.html";
       };
       if (profilePic) {
         reader.readAsDataURL(profilePic);
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (window.location.pathname.includes('dashboard.html')) {
     if (!sessionStorage.getItem("loggedIn")) {
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     }
     const user = JSON.parse(localStorage.getItem('user'));
     document.getElementById('displayName').innerText = user.fullName;
@@ -79,5 +79,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function logout() {
   sessionStorage.clear();
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 }

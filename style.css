@@ -1,35 +1,122 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
 body {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   background: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
-form, #dashboard {
-  background: white;
+  min-height: 100vh;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px gray;
-  width: 300px;
-}
-input, select, textarea, button {
-  width: 100%;
-  margin: 8px 0;
-  padding: 10px;
-}
-h2 {
-  text-align: center;
-}
-img {
-  display: block;
-  margin: 10px auto;
-  border-radius: 50%;
 }
 
-#loginEmail{
-  width: 90%;
+/* Form & Dashboard */
+form,
+#dashboard {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
 }
-#loginPassword{
-  width: 90%;
+
+/* Input Elements */
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Profile Image */
+img {
+  display: block;
+  margin: 15px auto;
+  border-radius: 50%;
+  max-width: 100px;
+}
+
+/* Login Input Overrides */
+#loginEmail,
+#loginPassword {
+  width: 100%;
+}
+
+/* Navbar */
+.navBar {
+  width: 100%;
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  box-shadow: 0 0 10px gray;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Navbar Logo */
+#LOGO {
+  height: 60px;
+}
+
+.navLogo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0.5;
+}
+
+/* Navbar Title */
+.navBar h2 {
+  flex: 1;
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Navbar Content */
+.navContent {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 0.5;
+  gap: 20px;
+}
+
+/* Responsive Behavior */
+@media (max-width: 600px) {
+  .navBar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .navContent {
+    justify-content: center;
+  }
+
+  form,
+  #dashboard {
+    width: 90%;
+  }
 }
