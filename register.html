@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <form id="registerForm">
+    <h2>Register</h2>
+    <input type="text" id="fullName" placeholder="Full Name" required/>
+    <input type="email" id="email" placeholder="Email" required/>
+    <input type="password" id="password" placeholder="Password" required/>
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" required/>
+    <input type="text" id="phone" placeholder="Phone Number" required maxlength="10"/>
+    <div>
+      Gender:
+      <label><input type="radio" name="gender" value="Male"/>Male</label>
+      <label><input type="radio" name="gender" value="Female"/>Female</label>
+    </div>
+    <input type="date" id="dob" required/>
+    <textarea id="address" placeholder="Address" required></textarea>
+    <select id="city" required>
+      <option value="">Select City</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Patna">Patna</option>
+    </select>
+    <div>
+      Skills:
+      <label><input type="checkbox" value="HTML" class="skills"/>HTML</label>
+      <label><input type="checkbox" value="CSS" class="skills"/>CSS</label>
+      <label><input type="checkbox" value="JavaScript" class="skills"/>JS</label>
+    </div>
+    <input type="file" id="profilePic" accept="image/*"/>
+    <label><input type="checkbox" id="terms"/> I accept terms</label>
+    <button type="submit">Register</button>
+    <p>Already registered? <a href="login.html">Login</a></p>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
